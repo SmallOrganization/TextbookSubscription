@@ -11,7 +11,7 @@ namespace TextbookSubscription.RepositoryTests
     [TestClass]
     public class SchoolRepositoryTests
     {
-        TestContext TestContext { get; set; }
+        public TestContext TestContext { get; set; }
         SchoolRepository rep = new SchoolRepository(new EFRepositoryDbContext());
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace TextbookSubscription.RepositoryTests
         {
             //SELECT SchoolID FROM School WHERE SchoolName = "环境与安全工程学院"
             string expectedID = "FD652812831549878016B0B01F24509A";
-            var actualID = rep.GetSchoolIdByName("环境与安全工程学院");
+            var actualID = rep.GetSchoolIDByName("环境与安全工程学院");
             Assert.AreEqual(expectedID, actualID);
         }
     }

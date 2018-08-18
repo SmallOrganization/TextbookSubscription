@@ -11,13 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.Domain", "TextbookSubscription.Domain\TextbookSubscription.Domain.csproj", "{C3468B9D-0B6A-4A03-A60E-C9BE1589BCDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.RepositoryTests", "TextbookSubsciption.RepositoryTests\TextbookSubscription.RepositoryTests.csproj", "{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookManage.WebUI", "TextbookManage.WebUI\TextbookManage.WebUI.csproj", "{931413E7-2EF4-468C-911F-37D655B8184B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.Infrastructure", "TextbookSubscription.Infrastructure\TextbookSubscription.Infrastructure.csproj", "{E901854E-A721-4E21-98E9-AF2C963CF07B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.Repository", "TextbookSubscription.Repository\TextbookSubscription.Repository.csproj", "{E47FCF34-A2E6-4C3F-A190-89CB80FB2A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextbookSubscription.RepositoryTest", "TextbookSubscription.RepositoryTest\TextbookSubscription.RepositoryTest.csproj", "{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,6 @@ Global
 		{C3468B9D-0B6A-4A03-A60E-C9BE1589BCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3468B9D-0B6A-4A03-A60E-C9BE1589BCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3468B9D-0B6A-4A03-A60E-C9BE1589BCDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{931413E7-2EF4-468C-911F-37D655B8184B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{931413E7-2EF4-468C-911F-37D655B8184B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{931413E7-2EF4-468C-911F-37D655B8184B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{E47FCF34-A2E6-4C3F-A190-89CB80FB2A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E47FCF34-A2E6-4C3F-A190-89CB80FB2A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E47FCF34-A2E6-4C3F-A190-89CB80FB2A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

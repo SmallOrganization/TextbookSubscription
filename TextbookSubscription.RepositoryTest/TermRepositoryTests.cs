@@ -8,7 +8,7 @@ namespace TextbookSubscription.RepositoryTests
     [TestClass]
     public class TermRepositoryTests
     {
-        TestContext TestContext { get; set; }
+        public TestContext TestContext { get; set; }
         TermRepository rep = new TermRepository(new EFRepositoryDbContext());
 
         [TestMethod]

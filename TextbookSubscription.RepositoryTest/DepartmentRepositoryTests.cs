@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TextbookSubscription.Domain;
 using TextbookSubscription.Repository;
 
@@ -12,7 +8,7 @@ namespace TextbookSubscription.RepositoryTests
     [TestClass]
     public class DepartmentRepositoryTests
     {
-        TestContext TestContext { set; get; }
+        public TestContext TestContext { set; get; }
         DepartmentRepository rep = new DepartmentRepository(new EFRepositoryDbContext());
 
         [TestMethod]
