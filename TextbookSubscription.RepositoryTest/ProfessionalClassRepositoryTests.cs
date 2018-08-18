@@ -8,7 +8,7 @@ namespace TextbookSubscription.RepositoryTests
     [TestClass]
     public class ProfessionalClassRepositoryTests
     {
-        TestContext TestContext { get; set; }
+        public TestContext TestContext { get; set; }
         ProfessionalClassRepository rep = new ProfessionalClassRepository(new EFRepositoryDbContext());
 
         [TestMethod]

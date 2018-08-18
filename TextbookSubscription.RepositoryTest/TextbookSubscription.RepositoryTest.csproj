@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF22EFF4-8A7A-49EC-A602-9CB596F9FF73}</ProjectGuid>
+    <ProjectGuid>{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TextbookSubscription.RepositoryTests</RootNamespace>
-    <AssemblyName>TextbookSubsrciption.RepositoryTests</AssemblyName>
+    <RootNamespace>TextbookSubscription.RepositoryTest</RootNamespace>
+    <AssemblyName>TextbookSubscription.RepositoryTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,9 +57,9 @@
   <ItemGroup>
     <Compile Include="DepartmentRepositoryTests.cs" />
     <Compile Include="ProfessionalClassRepositoryTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolRepositoryTests.cs" />
     <Compile Include="TermRepositoryTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,12 +70,8 @@
       <Project>{c3468b9d-0b6a-4a03-a60e-c9be1589bcdd}</Project>
       <Name>TextbookSubscription.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TextbookSubscription.IApplication\TextbookSubscription.IApplication.csproj">
-      <Project>{e00e2716-3ba3-4e22-bc32-50edcedd88a9}</Project>
-      <Name>TextbookSubscription.IApplication</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TextbookSubscription.Infrastructure\TextbookSubscription.Infrastructure.csproj">
-      <Project>{E901854E-A721-4E21-98E9-AF2C963CF07B}</Project>
+      <Project>{e901854e-a721-4e21-98e9-af2c963cf07b}</Project>
       <Name>TextbookSubscription.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\TextbookSubscription.Repository\TextbookSubscription.Repository.csproj">
