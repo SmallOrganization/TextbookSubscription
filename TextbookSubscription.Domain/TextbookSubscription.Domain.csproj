@@ -51,21 +51,37 @@
   <ItemGroup>
     <Compile Include="AggregateRoot.cs" />
     <Compile Include="EFRepositoryDbContext.cs" />
+    <Compile Include="EntityMapping\AssociateSDPCMap.cs" />
+    <Compile Include="EntityMapping\BooksellerMap.cs" />
     <Compile Include="EntityMapping\DepartmentMap.cs" />
     <Compile Include="EntityMapping\ProfessionalClassMap.cs" />
     <Compile Include="EntityMapping\SchoolMap.cs" />
+    <Compile Include="EntityMapping\StudentDeclarationMap.cs" />
+    <Compile Include="EntityMapping\TeacherDeclarationMap.cs" />
     <Compile Include="EntityMapping\TermMap.cs" />
+    <Compile Include="EntityMapping\TextbookMap.cs" />
+    <Compile Include="Entity\AssociateSDPC.cs" />
+    <Compile Include="Entity\Bookseller.cs" />
+    <Compile Include="Entity\Declaration.cs" />
     <Compile Include="Entity\Department.cs" />
     <Compile Include="Entity\ProfessionalClass.cs" />
     <Compile Include="Entity\School.cs" />
+    <Compile Include="Entity\StudentDeclaration.cs" />
+    <Compile Include="Entity\TeacherDeclaration.cs" />
+    <Compile Include="Entity\Textbook.cs" />
     <Compile Include="IAggregateRoot.cs" />
     <Compile Include="IEFRepositoryDbContext.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="IRepositories\IAssociateSDPCRepository.cs" />
+    <Compile Include="IRepositories\IBooksellerRepository.cs" />
     <Compile Include="IRepositories\IDepartmentRepository.cs" />
     <Compile Include="IRepositories\IProfessionalClassRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="IRepositories\ISchoolRepository.cs" />
+    <Compile Include="IRepositories\IStudentDeclarationRepository.cs" />
+    <Compile Include="IRepositories\ITeacherDeclarationRepository.cs" />
     <Compile Include="IRepositories\ITermRepository.cs" />
+    <Compile Include="IRepositories\ITextbookRepository.cs" />
     <Compile Include="IRepositoryDbContext.cs" />
     <Compile Include="ISql.cs" />
     <Compile Include="IUnitOfWork.cs" />
@@ -75,7 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

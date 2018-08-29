@@ -1,14 +1,17 @@
 ﻿namespace TextbookSubscription.Domain.Entity
 {
-    using System.Collections.Generic;
-
-    public class School:AggregateRoot
+    public class School : AggregateRoot
     {
         /// <summary>
         /// 学院ID
         /// </summary>
         public string SchoolID { get; set; }
         
+        /// <summary>
+        /// 学院编号
+        /// </summary>
+        public string SchoolNum { get; set; }
+
         /// <summary>
         /// 学院名称
         /// </summary>

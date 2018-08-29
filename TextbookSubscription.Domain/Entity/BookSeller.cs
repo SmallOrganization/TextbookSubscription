@@ -1,26 +1,21 @@
 ﻿namespace TextbookSubscription.Domain.Entity
 {
-    public class Department : AggregateRoot
+    public class Bookseller : AggregateRoot
     {
         /// <summary>
-        /// 教研室ID
+        /// 书商ID
         /// </summary>
-        public string DepartmentID { get; set; }
+        public System.Guid BooksellerID { get; set; }
 
         /// <summary>
-        /// 教研室编号
+        /// 书商编号
         /// </summary>
-        public string DepartmentNum { get; set; }
+        public long BooksellerNum { get; set; }
 
         /// <summary>
-        /// 教研室名称
+        /// 书商名称
         /// </summary>
-        public string DepartmentName { get; set; }
-
-        /// <summary>
-        /// 学院ID
-        /// </summary>
-        public string SchoolID { get; set; }
+        public string BooksellerName { get; set; }
 
         /// <summary>
         /// 联系人
@@ -28,7 +23,7 @@
         public string Contact { get; set; }
 
         /// <summary>
-        /// 电话
+        /// 联系电话
         /// </summary>
         public string Telephone { get; set; }
     }

@@ -5,7 +5,7 @@
     using System.Threading;
     using TextbookSubscription.Domain.EFDbContext;
 
-    public class EFRepositoryDbContext : RepositoryContext ,IEFRepositoryDbContext
+    public class EFRepositoryDbContext : RepositoryContext, IEFRepositoryDbContext
     {
         #region 私有变量
 

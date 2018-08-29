@@ -7,8 +7,8 @@
     <ProjectGuid>{111AA1E0-FC96-4B1C-90FE-8CEF6E4E4C37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TextbookSubscription.RepositoryTest</RootNamespace>
-    <AssemblyName>TextbookSubscription.RepositoryTest</AssemblyName>
+    <RootNamespace>TextbookSubscription.RepositoryTests</RootNamespace>
+    <AssemblyName>TextbookSubscription.RepositoryTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -60,6 +60,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolRepositoryTests.cs" />
     <Compile Include="TermRepositoryTests.cs" />
+    <Compile Include="StudentDeclarationRepositoryTests.cs" />
+    <Compile Include="TextbookRepositoryTests.cs" />
+    <Compile Include="TeacherDeclarationRepositoryTests.cs" />
+    <Compile Include="BooksellerRepositoryTests.cs" />
+    <Compile Include="AssociateSDPCRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

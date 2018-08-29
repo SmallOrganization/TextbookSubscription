@@ -2,26 +2,27 @@
 {
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.ModelConfiguration;
-    using TextbookSubscription.Domain.Entity;
+    using Entity;
 
     public class TermMap : EntityTypeConfiguration<Term>
     {
         public TermMap()
         {
-            //Primary Key
+            // Primary Key
             HasKey(t => t.TermNum);
-            Property(t => t.TermNum)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(t => t.TermNum).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            //Properties
-            Property(t => t.IsCurrentTerm)
-                .HasMaxLength(1);
+            // Property Constraints
+            Property(t => t.TermName).IsRequired().HasMaxLength(20);
+            Property(t => t.IsCurrentTerm).IsRequired().IsFixedLength().HasMaxLength(1);
+            Property(t => t.BeginDate).IsRequired();
+            Property(t => t.EndDate).IsRequired();
 
-            //Table && Column Mappings
+            // Table && Column Mappings
             ToTable("Term", "dbo");
             Property(t => t.TermName).HasColumnName("Term");
 
-            //Ingore property
+            // Ingore property
             Ignore(t => t.ID);
         }
     }

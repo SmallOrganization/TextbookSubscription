@@ -1,28 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-using TextbookSubscription.Domain.Entity;
-
-namespace TextbookSubscription.Domain.EntityMapping
+﻿namespace TextbookSubscription.Domain.EntityMapping
 {
-    public class SchoolMap:EntityTypeConfiguration<School>
+    using System.Data.Entity.ModelConfiguration;
+    using Entity;
+
+    public class SchoolMap : EntityTypeConfiguration<School>
     {
         public SchoolMap()
         {
-            //PrimaryKey
-            HasKey(t => t.SchoolID);
+            // PrimaryKey
+            HasKey(s => s.SchoolID);
 
-            //Properties
-            Property(t => t.SchoolID).IsRequired();
-            Property(t => t.SchoolName).IsRequired();
-            Property(t => t.Contact).IsRequired();
-            Property(t => t.Telephone).IsRequired();
-            Property(t => t.Telephone).HasMaxLength(11);
+            // Property Constraints
+            Property(s => s.SchoolNum).IsRequired().HasMaxLength(20);
+            Property(s => s.SchoolName).IsRequired().HasMaxLength(50);
+            Property(s => s.Contact).HasMaxLength(50);
+            Property(s => s.Telephone).HasMaxLength(20);
 
-            //Table
+            // Table
             ToTable("School", "dbo");
 
-            //Ignore
-            Ignore(t => t.ID);
+            // Ignore
+            Ignore(s => s.ID);
         }
     }
 }

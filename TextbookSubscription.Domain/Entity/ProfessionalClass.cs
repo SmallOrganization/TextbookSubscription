@@ -1,5 +1,6 @@
 ﻿namespace TextbookSubscription.Domain.Entity
 {
+    using System.Collections.Generic;
     using TextbookSubscription.Domain;
 
     public class ProfessionalClass : AggregateRoot
@@ -28,5 +29,10 @@
         /// 班级对应的学院ID
         /// </summary>
         public string SchoolID { get; set; }
+
+        /// <summary>
+        /// 学生申报-专业班级 关联表
+        /// </summary>
+        public virtual ICollection<AssociateSDPC> AssociateSDPC { get; set; }
     }
 }

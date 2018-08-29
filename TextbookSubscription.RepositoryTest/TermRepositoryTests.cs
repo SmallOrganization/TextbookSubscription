@@ -2,6 +2,7 @@
 using System.Linq;
 using TextbookSubscription.Repository;
 using TextbookSubscription.Domain;
+using TextbookSubscription.Domain.Entity;
 
 namespace TextbookSubscription.RepositoryTests
 {
@@ -14,7 +15,7 @@ namespace TextbookSubscription.RepositoryTests
         [TestMethod]
         public void RetriveAllTerm()
         {
-            //SELECT COUNT(*) FROM Term = 16
+            //SELECT * FROM Term = 16
             int totalCount = 16;
             var termList = rep.GetAll();
             foreach (var t in termList)

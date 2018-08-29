@@ -2,6 +2,7 @@
 using System.Linq;
 using TextbookSubscription.Repository;
 using TextbookSubscription.Domain;
+using TextbookSubscription.Domain.Entity;
 
 namespace TextbookSubscription.RepositoryTests
 {
@@ -14,8 +15,7 @@ namespace TextbookSubscription.RepositoryTests
         [TestMethod]
         public void RetriveAllClass()
         {
-            //SELECT COUNT(*) FROM ProfessionalClass = 1868
-            int totalCount = 1868;
+            int totalCount = rep.ExecuteQuery<ProfessionalClass>("SELECT * FROM ProfessionalClass").Count();
             var termList = rep.GetAll();
             Assert.AreEqual(totalCount, termList.Count());
         }

@@ -2,6 +2,7 @@
 using System.Linq;
 using TextbookSubscription.Domain;
 using TextbookSubscription.Repository;
+using TextbookSubscription.Domain.Entity;
 
 namespace TextbookSubscription.RepositoryTests
 {
@@ -15,7 +16,7 @@ namespace TextbookSubscription.RepositoryTests
         public void RetriveAllDepartment()
         {
             //SELECT COUNT(*) FROM Department = 320
-            int totalcount = 320;
+            int totalcount = rep.ExecuteQuery<Department>("SELECT * FROM Department").Count();
             var departmentList = rep.GetAll();
             foreach (var d in departmentList)
             {
@@ -27,8 +28,8 @@ namespace TextbookSubscription.RepositoryTests
         [TestMethod]
         public void RetriveDepartmentListBySchoolID()
         { 
-            //SELECT COUNT(*) FROM Department WHERE SchoolID='' = 6
-            int totalCount = 6;
+            int totalCount = rep.ExecuteQuery<Department>
+                        ("SELECT * FROM Department WHERE SchoolID='FD652812831549878016B0B01F24509A'").Count();
             var departmentList = rep.GetDepartmentBySchoolID("FD652812831549878016B0B01F24509A");
             foreach (var d in departmentList)
             {

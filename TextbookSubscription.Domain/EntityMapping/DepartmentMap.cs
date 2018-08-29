@@ -1,24 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-using TextbookSubscription.Domain.Entity;
-
-namespace TextbookSubscription.Domain.EntityMapping
+﻿namespace TextbookSubscription.Domain.EntityMapping
 {
+    using System.Data.Entity.ModelConfiguration;
+    using Entity;
+
     public class DepartmentMap : EntityTypeConfiguration<Department>
     {
         public DepartmentMap()
         {
-            //Primary Key
+            // Primary Key
             HasKey(d => d.DepartmentID);
 
-            //Properties
-            Property(d => d.DepartmentName).IsRequired();
-            Property(d => d.Telephone).HasMaxLength(11);
+            // Property Constraints
+            Property(d => d.DepartmentNum).IsRequired().HasMaxLength(20);
+            Property(d => d.DepartmentName).IsRequired().HasMaxLength(50);
+            Property(d => d.SchoolID).IsRequired().HasMaxLength(50);
+            Property(d => d.Contact).HasMaxLength(50);
+            Property(d => d.Telephone).HasMaxLength(20);
 
-            //Table && Column Mappings
+            // Table && Column Mappings
             ToTable("Department", "dbo");
 
-            //Ignore
+            // Ignore
             Ignore(t => t.ID);
         }
     }

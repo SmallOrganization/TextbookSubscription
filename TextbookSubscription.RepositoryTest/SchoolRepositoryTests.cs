@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TextbookSubscription.Repository;
 using TextbookSubscription.Domain;
+using TextbookSubscription.Domain.Entity;
 using System.Linq;
 
 namespace TextbookSubscription.RepositoryTests
@@ -17,8 +18,7 @@ namespace TextbookSubscription.RepositoryTests
         [TestMethod]
         public void RetriveAllSchool()
         {
-            //SELECT COUNT(*) FROM School = 55
-            int totalCount = 55;
+            int totalCount = rep.ExecuteQuery<School>("SELECT * FROM School").Count();
             var schoollist = rep.GetAll();
             foreach (var t in schoollist)
             {
@@ -30,8 +30,8 @@ namespace TextbookSubscription.RepositoryTests
         [TestMethod]
         public void RetriveSchoolIDByName()
         {
-            //SELECT SchoolID FROM School WHERE SchoolName = "环境与安全工程学院"
-            string expectedID = "FD652812831549878016B0B01F24509A";
+            string expectedID = rep.ExecuteQuery<School>("SELECT * FROM School WHERE SchoolName = '环境与安全工程学院'").First().SchoolID;
+
             var actualID = rep.GetSchoolIDByName("环境与安全工程学院");
             Assert.AreEqual(expectedID, actualID);
         }
