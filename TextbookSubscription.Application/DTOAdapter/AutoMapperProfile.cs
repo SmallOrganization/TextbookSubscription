@@ -11,19 +11,24 @@
         /// </summary>
         protected override void Configure()
         {
-            //Term => TermView
+            // Term => TermView
             CreateMap<Term, TermView>()
                 .ForMember(tv => tv.TermID, opt => opt.MapFrom(t => t.TermNum))
                 .ForMember(tv => tv.Term, opt => opt.MapFrom(tv => tv.TermName));
 
-            //School => SchoolView
+            // School => SchoolView
             CreateMap<School, SchoolView>();
 
-            //SchoolView => School
+            // SchoolView => School
             CreateMap<SchoolView, School>();
 
-            //department => DepartmentView
+            // Department => DepartmentView
             CreateMap<Department, DepartmentView>();
+
+            // Declaration => StudentDeclaration/TeacherDeclaration
+            // 仅在导入申报时为了消除重复代码用
+            CreateMap<Declaration, StudentDeclaration>();
+            CreateMap<Declaration, TeacherDeclaration>();
         }
     }
 }
