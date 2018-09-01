@@ -10,6 +10,10 @@
             // Primary Key
             HasKey(d => d.DepartmentID);
 
+            // Relationships
+            // Department : School = * : 1
+            HasRequired(d => d.School).WithMany(s => s.Departments);
+
             // Property Constraints
             Property(d => d.DepartmentNum).IsRequired().HasMaxLength(20);
             Property(d => d.DepartmentName).IsRequired().HasMaxLength(50);

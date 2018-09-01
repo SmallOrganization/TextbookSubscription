@@ -31,5 +31,10 @@
         /// 电话
         /// </summary>
         public string Telephone { get; set; }
+
+        /// <summary>
+        /// 学院
+        /// </summary>
+        public virtual School School { get; set; }
     }
 }

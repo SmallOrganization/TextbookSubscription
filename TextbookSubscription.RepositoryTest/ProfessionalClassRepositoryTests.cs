@@ -19,5 +19,13 @@ namespace TextbookSubscription.RepositoryTests
             var termList = rep.GetAll();
             Assert.AreEqual(totalCount, termList.Count());
         }
+
+        [TestMethod]
+        public void RetriveSchool()
+        {
+            string expectedSchoolName = "经济与法学学院";
+            ProfessionalClass pc = rep.Single(p => p.ClassNum == "201541102");
+            Assert.AreEqual(expectedSchoolName, pc.School.SchoolName);
+        }
     }
 }

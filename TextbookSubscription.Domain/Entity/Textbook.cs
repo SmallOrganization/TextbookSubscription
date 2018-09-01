@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace TextbookSubscription.Domain.Entity
+﻿namespace TextbookSubscription.Domain.Entity
 {
     public class Textbook : AggregateRoot
     {

@@ -11,5 +11,10 @@
         {
 
         }
+
+        public ProfessionalClass GetByName(string className)
+        {
+            return Single(pc => pc.ClassName == className);
+        }
     }
 }

@@ -13,6 +13,8 @@
             // Relationships
             // ProfessionalClass : AssociateSDPC = 1 : *
             HasMany(pc => pc.AssociateSDPC).WithRequired(a => a.ProfessionalClass);
+            // ProfessionalClass : School = * : 1
+            HasRequired(pc => pc.School).WithMany(pc => pc.ProfessionalClasses);
 
             // Property Constraints
             Property(pc => pc.ClassNum).IsRequired().HasMaxLength(20);

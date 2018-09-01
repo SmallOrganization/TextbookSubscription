@@ -10,6 +10,10 @@
             // PrimaryKey
             HasKey(s => s.SchoolID);
 
+            // Relationships
+            // School : ProfessionalClass = 1 : *
+            HasMany(s => s.ProfessionalClasses).WithRequired(pc => pc.School);
+
             // Property Constraints
             Property(s => s.SchoolNum).IsRequired().HasMaxLength(20);
             Property(s => s.SchoolName).IsRequired().HasMaxLength(50);

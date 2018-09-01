@@ -26,9 +26,14 @@
         public string Grade { get; set; }
 
         /// <summary>
-        /// 班级对应的学院ID
+        /// 学院ID
         /// </summary>
         public string SchoolID { get; set; }
+
+        /// <summary>
+        /// 学院
+        /// </summary>
+        public virtual School School { get; set; }
 
         /// <summary>
         /// 学生申报-专业班级 关联表

@@ -36,7 +36,10 @@
         #endregion
 
         #region 实现RepositoryContext
-
+        
+        /// <summary>
+        /// 向数据库提交更改
+        /// </summary>
         public override void Commit()
         {
             if (!Committed)
@@ -47,6 +50,9 @@
             }
         }
 
+        /// <summary>
+        /// 回滚操作
+        /// </summary>
         public override void Rollback()
         {
             Committed = false;

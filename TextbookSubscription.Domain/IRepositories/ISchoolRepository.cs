@@ -1,6 +1,7 @@
 ﻿namespace TextbookSubscription.Domain.IRepositories
 {
     using TextbookSubscription.Domain.Entity;
+    using System.Collections.Generic;
 
     public interface ISchoolRepository:IRepository<School>
     {

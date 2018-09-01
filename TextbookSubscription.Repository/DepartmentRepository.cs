@@ -12,11 +12,5 @@
         {
 
         }
-
-        public IEnumerable<Department> GetDepartmentBySchoolID(string schoolID)
-        {
-            var departmentList = Find(d => d.SchoolID == schoolID);
-            return departmentList;
-        }
     }
 }

@@ -28,8 +28,8 @@
             Property(td => td.ImportDate).IsRequired();
             Property(td => td.ApprovalStatus).IsRequired().HasMaxLength(50);
             Property(td => td.Priority).IsRequired().HasMaxLength(50);
-            Property(td => td.DataSign).IsRequired().IsFixedLength().HasMaxLength(1);
-            Property(td => td.NeedTextbook).IsRequired().IsFixedLength().HasMaxLength(1);
+            Property(td => td.DataSign).IsRequired();
+            Property(td => td.NeedTextbook).IsRequired();
             Property(td => td.Remark).HasMaxLength(50);
 
             // Table && Column Mappings

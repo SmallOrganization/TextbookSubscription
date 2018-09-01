@@ -31,9 +31,24 @@ namespace TextbookSubscription.RepositoryTests
         public void RetriveSchoolIDByName()
         {
             string expectedID = rep.ExecuteQuery<School>("SELECT * FROM School WHERE SchoolName = '环境与安全工程学院'").First().SchoolID;
-
             var actualID = rep.GetSchoolIDByName("环境与安全工程学院");
             Assert.AreEqual(expectedID, actualID);
+        }
+
+        [TestMethod]
+        public void RetriveDepartments()
+        {
+            // SELECT COUNT(*) FROM Department d LEFT JOIN School s ON d.SchoolID = s.SchoolID WHERE SchoolName='计算机学院' = 10
+            School school = rep.Single(s => s.SchoolName == "计算机学院");
+            Assert.AreEqual(school.Departments.Count(),10);
+        }
+
+        [TestMethod]
+        public void RetriveProfessionalClass()
+        {
+            // SELECT COUNT(*) FROM ProfessionalClass p LEFT JOIN School s ON p.SchoolID = s.SchoolID WHERE SchoolName='计算机学院' = 103
+            School school = rep.Single(s => s.SchoolName == "计算机学院");
+            Assert.AreEqual(school.ProfessionalClasses.Count(), 103);
         }
     }
 }

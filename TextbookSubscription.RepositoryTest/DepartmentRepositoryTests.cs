@@ -24,18 +24,5 @@ namespace TextbookSubscription.RepositoryTests
             }
             Assert.AreEqual(totalcount, departmentList.Count());
         }
-
-        [TestMethod]
-        public void RetriveDepartmentListBySchoolID()
-        { 
-            int totalCount = rep.ExecuteQuery<Department>
-                        ("SELECT * FROM Department WHERE SchoolID='FD652812831549878016B0B01F24509A'").Count();
-            var departmentList = rep.GetDepartmentBySchoolID("FD652812831549878016B0B01F24509A");
-            foreach (var d in departmentList)
-            {
-                TestContext.WriteLine($"{d.DepartmentName} -- {d.SchoolID}");
-            }
-            Assert.AreEqual(totalCount, departmentList.Count());
-        }
     }
 }
