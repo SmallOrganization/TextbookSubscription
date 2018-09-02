@@ -22,7 +22,7 @@ namespace TextbookSubscription.Application
         public IEnumerable<DepartmentView> GetDepartmentList(string schoolName)
         {
             var schoolId = _schoolRep.GetSchoolIDByName(schoolName);
-            var departmentList = _departmentRep.GetDepartmentBySchoolID(schoolId);
+            var departmentList = _schoolRep.Single(s => s.SchoolID == schoolId).Departments;
             var departmentViewList = _adapter.Adapt<DepartmentView>(departmentList);
 
             return departmentViewList;
