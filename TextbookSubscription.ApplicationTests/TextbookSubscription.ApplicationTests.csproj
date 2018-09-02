@@ -38,7 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -71,13 +76,16 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelDataMappingTest.cs" />
+    <Compile Include="ExcelDataImportingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="征订计划导入示例数据.xlsx" />
   </ItemGroup>
@@ -93,6 +101,10 @@
     <ProjectReference Include="..\TextbookSubscription.Infrastructure\TextbookSubscription.Infrastructure.csproj">
       <Project>{e901854e-a721-4e21-98e9-af2c963cf07b}</Project>
       <Name>TextbookSubscription.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextbookSubscription.Repository\TextbookSubscription.Repository.csproj">
+      <Project>{e47fcf34-a2e6-4c3f-a190-89cb80fb2a1f}</Project>
+      <Name>TextbookSubscription.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
