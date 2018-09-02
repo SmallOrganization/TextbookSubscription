@@ -12,9 +12,9 @@
 
             // Relationships
             // AssociateSDPC : ProfessionalClass = * : 1
-            HasRequired(a => a.ProfessionalClass).WithMany(pc => pc.AssociateSDPC);
+            HasRequired(a => a.ProfessionalClass).WithMany(pc => pc.AssociateSDPC).HasForeignKey(a => a.ClassID);
             // AssociateSDPC : StudentDeclaration = * : 1
-            HasRequired(a => a.StudentDeclaration).WithMany(pc => pc.AssociateSDPC);
+            HasRequired(a => a.StudentDeclaration).WithMany(pc => pc.AssociateSDPC).HasForeignKey(a => a.DeclarationID);
 
             // Property Constraints
             Property(a => a.DeclarationCount).IsRequired();
